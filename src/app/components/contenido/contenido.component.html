@@ -1,0 +1,21 @@
+<div class="container-content">
+  <div class="img-container">
+    <img src="../../../assets/sun-behind-cloud_26c5.png" alt="" />
+  </div>
+  <div class="container-info">
+    <h2>{{ gradosAVG }}°</h2>
+    <p class="secondary">
+      <small>{{ ((gradosMin - 32) * 5) / 9 | number: "1.1-1" }}°</small> -
+      {{ ((gradosMax - 32) * 5) / 9 | number: "1.1-1" }}°
+    </p>
+    <p class="secondary estado">{{ clima }}</p>
+    <p class="secondary">Hoy <b>·</b> {{ fechaActual | fecha }}</p>
+    <h5 class="secondary">
+      <i class="fa-solid fa-location-dot"></i>
+      Formosa
+    </h5>
+  </div>
+</div>
+<div class="container-nextInfo">
+  <app-next-content></app-next-content>
+</div>

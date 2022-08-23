@@ -1,0 +1,25 @@
+<div class="container-next-info">
+  <a
+    [href]="card.MobileLink"
+    class="card"
+    *ngFor="let card of resultadoWeather"
+    target="_blank"
+  >
+    <h2>{{ card.Date | fecha }}</h2>
+    <img src="../../../assets/icons8-sol.svg" alt="" />
+    <p>
+      {{ card.Day.IconPhrase }}
+    </p>
+    <p class="secondary">
+      Min
+      {{ ((card.Temperature.Minimum.Value - 32) * 5) / 9 | number: "1.1-1" }}°
+      <small
+        >Max
+        {{ ((card.Temperature.Maximum.Value - 32) * 5) / 9 | number: "1.1-1" }}°
+      </small>
+    </p>
+    <p class="secondary">
+      Precipitaciones: {{ card.Day.HasPrecipitation ? "si" : "no" }}
+    </p>
+  </a>
+</div>
